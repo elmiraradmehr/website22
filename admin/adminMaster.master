@@ -1,0 +1,200 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeFile="adminMaster.master.cs" Inherits="admin_adminMaster" %>
+
+<!DOCTYPE html>
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head runat="server">
+    <title></title>
+    <asp:ContentPlaceHolder id="head" runat="server">
+    </asp:ContentPlaceHolder>
+     <link href="styleadmin.css" rel="stylesheet"  type="text/css" />
+    <style type="text/css">
+        .d {}
+    </style>
+</head>
+
+
+<body >
+    <form id="form1" runat="server">
+    <div> 
+               
+            <center>
+
+            <div style="background-color:black; width:1200px ; height:100px;">
+                 <div style="float:left;padding-left:10px;padding-top:15px;" >
+                         <img src="../kshvar/Flag_of_Iran.svg.png" width="60" height="30" />
+
+                 </div>
+                <div style="float:right;padding-right:10px;" class="share">
+                    <ul class="share-buttons">
+                        <li><a href="https://www.facebook.com/sharer/sharer.php?u=&t=" title="Share on Facebook" target="_blank"><img src="../nt/facebook.png"/></a></li>
+                        <li><a href="https://twitter.com/intent/tweet?source=&text=:%20" target="_blank" title="Tweet"><img src="../nt/twitter.png" /></a></li>
+                        <li><a href="https://plus.google.com/share?url=" target="_blank" title="Share on Google+"><img src="../nt/google.png"/></a></li>
+                        <li><a href="http://www.linkedin.com/shareArticle?mini=true&url=&title=&summary=&source=" target="_blank" title="Share on LinkedIn"><img src="../nt/linkedin.png"/></a></li>
+                        <li><a href="mailto:?subject=&body=:%20" target="_blank" title="Email"><img src="../nt/email.png"/></a></li>
+                     </ul>
+
+                </div>
+          
+            <div id="headq" style="padding-bottom:20px;" >
+                <center>
+                <p style="font-family:Ravie; color:white;font-size:46px;margin:0 auto;padding-top:10px;padding-left:120px;" class="shadow">IRAN FILM ACADEMI</p>
+                    </center>
+               <table style="direction:rtl;">
+                   <tr>
+                       <td>
+                         <div style="color:white;padding-bottom:35px;font-size:16px;">0936****|0935****<img src="../images/photono.png" width="25" height="20" />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</div>  
+                       </td>
+
+                       <td>
+                            <div style="padding-bottom:35px;font-size:16px;direction:rtl; font-family:B Bardiya;color:white" >&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;برترین سایت ایرانی پخش کننده فیلم</div>
+                       </td>
+                   </tr>
+               </table>
+              
+                 </div>
+                </div>
+     <br />
+
+
+        <center>
+   <div id="menu">
+   <ul>
+ <li><a href="Default2.aspx">صفحه اصلی  </a> </li>
+<li><a href="#">مدیریت کاربران</a>
+      <ul class="submenu">
+         <li><a href="adnews.aspx">مدیریت مطالب </a> </li>
+        <li><a href="adcomment.aspx">مدیریت نظرات</a></li>
+        <li><a href="categories.aspx">مدیریت موضوع</a></li>
+        <li><a href="contact.aspx">مدیریت تماس با ما</a></li>
+        
+        <li><a href="uploadadmin.aspx">مدیریت آپلود</a></li>
+        <li><a href="moarfi.aspx">مدیریت معرفی فیلم</a></li>
+        <li><a href="catimg.aspx">عکس موضوع</a></li>
+       
+                          
+    </ul>
+
+</li>
+<li><a href="#">بخش مدیران </a> 
+       <ul class="submenu">
+            <li><a href="news.aspx">مدیریت مطالب</a></li>
+            <li><a href="link.aspx">مدیریت پیوندها</a></li>
+            <li><a href="infoad.aspx">اطلاعات مدیران</a></li>
+            
+       </ul>
+ </li>
+<li><a href="../Default.aspx"> صفحه کاربران </a></li>
+</ul>
+
+<div style="float:left">
+    <asp:ImageButton style="padding-left:10px;padding-bottom:0px" ID="ImageButton1" runat="server" ImageUrl="../imgmod/imgsearch/search_rtl.png"  Width="25" Height="15" OnClick="ImageButton1_Click"></asp:ImageButton>
+    <asp:TextBox style="border-radius:6px;" ID="TextBox1" runat="server" Height="19px"></asp:TextBox>
+</div>
+       <div class="clear"></div>
+
+       <div style="float:left;">
+           </div>  
+</div>
+     
+        </center>
+
+        <center>
+            <div id="contaner">
+
+              
+            <br />
+            <asp:ContentPlaceHolder ID="ContentPlaceHolder3" runat="server">
+                
+            </asp:ContentPlaceHolder>
+            <br />
+            <asp:ContentPlaceHolder ID="ContentPlaceHolder2" runat="server">
+                <p>
+                    <br />
+                </p>
+                <p>
+                </p>
+                <p>
+                </p>
+                <p>
+                </p>
+                <p>
+                </p>
+                <p>
+                </p>
+                <p>
+                </p>
+                <p>
+                </p>
+            </asp:ContentPlaceHolder>
+               
+          
+       </div>
+             <div style="direction:rtl;width:230px;height:45px; float:left;position:relative;float:left;color:yellow;margin-left:120px;border-bottom:1px solid #dfd8d8;" ><p style="padding-top:2px">اطلاعات مدیران</p></div>
+                  <div style="float:left;position:absolute"> 
+                        <asp:DataList ID="DataList3" runat="server" DataSourceID="ObjectDataSource3"  DataKeyField="infoadid">
+                           <ItemTemplate>
+                                <ul style="direction:rtl;color:white;margin-left:230px;margin-top:60px;height:0;list-style:none">
+                                    <li><img src="e/<%# Eval("image") %>" width="25" height="25" /> <%# Eval("infoadfname") %>    <%# Eval("infoadlname") %> </li>
+                                </ul>
+                               
+                            </ItemTemplate>
+                         </asp:DataList>
+                    
+                  <asp:ObjectDataSource runat="server" ID="ObjectDataSource3" OldValuesParameterFormatString="original_{0}" SelectMethod="GetDatainfoAd" TypeName="infoadTableAdapters.infoadTableAdapter"></asp:ObjectDataSource>
+<asp:ObjectDataSource runat="server" ID="ObjectDataSource2" OldValuesParameterFormatString="original_{0}" SelectMethod="GetDatainfoAd" TypeName="infoadTableAdapters.infoadTableAdapter"></asp:ObjectDataSource>
+                </div>
+
+
+            
+                    <div style="width:1200px;height:300px;background-color:black;color:white;">
+                        
+                          
+                        <div style="float:right;width:230px;border-bottom:1px solid #dfd8d8;color:yellow;padding-top:15px;margin-right:20px;height:30px;" >سایت های کمکی</div>
+                       <div style="float:right;">
+                        <asp:DataList ID="DataList1" runat="server" DataKeyField="linkid" DataSourceID="ObjectDataSource1" Width="121px" ItemStyle-VerticalAlign="Top" CssClass="d">
+                            <ItemTemplate>
+                                <ul style="margin-left:1000px;direction:rtl;list-style:square;margin-right:20px">
+                                    <li style="color:white;"><a href="<%# Eval("linkurl") %>" title="<%# Eval("linkname") %>" target="_self" style="color:white;"><%# Eval("linkname") %></a></li>
+                                </ul>
+                           </ItemTemplate>
+                          
+                        </asp:DataList>
+                            
+                            <asp:ObjectDataSource runat="server" ID="ObjectDataSource1" OldValuesParameterFormatString="original_{0}" SelectMethod="GetDataAllLink" TypeName="linkTableAdapters.tbl_linkTableAdapter"></asp:ObjectDataSource>
+                       </div> 
+
+
+                        <div style="width:230px;direction:rtl;">
+                           <div style="direction:rtl;width:230px;padding-top:20px;margin-left:120px;border-bottom:1px solid #dfd8d8;height:25px;color:yellow;">آخرین مطالب سایت</div>
+                            <div style="float:right;position:absolute">
+                             <asp:DataList ID="DataList2" runat="server" DataKeyField="adnewsid" DataSourceID="ObjectDataSource5" Width="226px" CssClass="akhtnazr" ItemStyle-VerticalAlign="Top"  >
+                                
+                                 <ItemTemplate>
+                                     <ul style="direction:rtl;list-style:square">
+                                           <li style="color:white;"><a href="<%# Eval("adnewsid","Default2.aspx?nid={0}") %>" target="_self" title="<%# Eval("adnewstitle") %>"style="color:white;"><%# Eval("adnewstitle") %></a></li>
+                                    </ul>
+                               </ItemTemplate>
+
+                             </asp:DataList>
+                                </div>
+             <asp:ObjectDataSource runat="server" ID="ObjectDataSource5" OldValuesParameterFormatString="original_{0}" SelectMethod="GetDataBy3TOP10" TypeName="adnewTableAdapters.TableTableAdapter"></asp:ObjectDataSource>
+
+                        </div>
+                    </div>
+              <div id="foot">
+            </div>  
+        </center>
+
+
+       
+        <asp:ContentPlaceHolder id="ContentPlaceHolder1" runat="server">
+        
+        </asp:ContentPlaceHolder>
+      
+         
+    </div>
+      
+    </form>
+</body>
+</html>

@@ -1,0 +1,266 @@
+﻿ <%@ Master Language="C#" AutoEventWireup="true" CodeFile="MasterPage.master.cs" Inherits="MasterPage" %>
+
+<!DOCTYPE html>
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head runat="server">
+    <link rel="Shortcut Icon" href="img/TITLEICON.PNG" />
+    <div class="clear"></div>
+    <asp:ContentPlaceHolder ID="head" runat="server">
+    </asp:ContentPlaceHolder>
+
+    <title></title>
+
+    <!-- include jQuery library -->
+    <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.5/jquery.min.js"></script>
+    <!-- include Cycle plugin -->
+    <script type="text/javascript" src="http://malsup.github.com/jquery.cycle.all.js"></script>
+
+    <script type="text/javascript">
+        $(document).ready(function () {
+            $('.slideshow').cycle({
+                fx: 'fade',
+                pause: 1,
+                prev: '#prev',
+                next: '#next'
+            });
+        });
+    </script>
+    <link href="Style.css" rel="stylesheet" type="text/css" />
+   
+</head>
+
+<body>
+    <form id="form1" runat="server">
+        <div style="margin:auto;position:relative">
+              
+   
+       
+            <center>
+
+            <div style="background-color:black; width:100%; height:518px;border:1px solid black;" aria-autocomplete="both">
+                 <div style="float:left;padding-left:10px;padding-top:15px;" >
+                    
+                         <img src="kshvar/Flag_of_Iran.svg.png" width="60" height="30" />
+                     
+                    
+
+                 </div>
+                <div style="float:right;padding-right:10px;" class="share">
+                    <ul class="share-buttons">
+                        <li><a href="https://www.facebook.com/sharer/sharer.php?u=&t=" title="Share on Facebook" target="_blank"><img src="nt/facebook.png"/></a></li>
+                        <li><a href="https://twitter.com/intent/tweet?source=&text=:%20" target="_blank" title="Tweet"><img src="nt/twitter.png" /></a></li>
+                        <li><a href="https://plus.google.com/share?url=" target="_blank" title="Share on Google+"><img src="nt/google.png"/></a></li>
+                        <li><a href="http://www.linkedin.com/shareArticle?mini=true&url=&title=&summary=&source=" target="_blank" title="Share on LinkedIn"><img src="nt/linkedin.png"/></a></li>
+                        <li><a href="mailto:?subject=&body=:%20" target="_blank" title="Email"><img src="nt/email.png"/></a></li>
+                     </ul>
+
+                </div>
+          
+            <div id="headq" style="padding-bottom:20px;" >
+                <center>
+                <p style="font-family:Ravie; color:white;font-size:46px;margin:0 auto;padding-top:10px;padding-left:120px;" class="shadow">IRAN FILM ACADEMI</p>
+                    </center>
+               <table style="direction:rtl;">
+                   <tr>
+                       <td>
+                         <div style="color:white;padding-bottom:35px;font-size:16px;">0936****|0935****<img src="images/photono.png" width="25" height="20" />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</div>  
+                       </td>
+
+                       <td>
+                            <div style="padding-bottom:35px;font-size:16px;direction:rtl; font-family:B Bardiya;color:white" >&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;برترین سایت ایرانی پخش کننده فیلم</div>
+                       </td>
+                   </tr>
+               </table>
+              
+                 </div>
+            
+      <br />
+                <br />
+                <center>
+        <div id="menu" style="margin:0;padding:0;">
+         
+       
+            <ul>
+                <li><a href="Default.aspx" style="margin-right:400px;">صفحه اصلی</a></li>
+                <li><a  id="pop_sabtnam" href="JavaScript:newPopup('adlogin.aspx');">پنل مدیریت</a></li>
+                
+                <li><a href="contact.aspx">تماس با ما</a></li>
+                <li><a href="upld.aspx">آپلود سنتر</a></li>
+                <li><a id="pop_sabtnams" href="JavaScript:newPopup('startpage.aspx');">ورود</a></li>
+              
+     	        <li><a><asp:LoginName ID="LoginName1" runat="server"></asp:LoginName></a></li>
+                <div style="float:left;padding-top:10px;border-radius:6px;">
+                <li><asp:TextBox ID="TextBox1" style="border-radius:6px;width:200px;" runat="server" ></asp:TextBox></li>
+                <li><asp:ImageButton ID="ImageButton1" runat="server" ImageUrl="../imgmod/imgsearch/search_rtl.png"  Width="25" Height="15" OnClick="ImageButton1_Click"></asp:ImageButton></li>
+                </div>
+       
+            </ul>
+                 
+  <script>
+      function newPopup(url) {
+          popupWindow = window.open(
+          url, 'popUpWindow', 'height=500,width=500,left=10,top=10,resizable=yes,scrollbars=yes,toolbar=yes,menubar=no,location=no,directories=no,status=yes')
+      }
+  </script>
+       
+        </div>
+      </center>
+     <center>
+            <div id="header"> 
+              
+                <div id="slideshowContainer">
+                <div class="slideshow">
+                    <img src="slidshow/collection.PNG" width="1167" height="300" />&nbsp;&nbsp;&nbsp;
+                   <!-- <img src="slidshow/leon.PNG"  alt="" width="1167" height="300" />
+                    <img src="slidshow/pramid.PNG" "  alt="" width="1167" height="300" />
+                    <img src="slidshow/Untitled-2.jpg" " width="1167" height="300" />-->
+               
+</div>
+        <ul id="nav">
+	<li id="prev"><a href="#">Previo</a></li>
+	<li id="next"><a href="#">Next</a></li>
+</ul>
+</div>
+
+            
+          </div>
+   </center>
+            </center>
+            
+
+            <div id="contaner">
+                      <br />
+           
+              <div id="right">
+                  <center>
+                   
+                      
+                      <br />
+                      <br />
+                      <br />
+              <div class="right-top" style="color:#5c0d09;">دسته ها</div>    
+                   </center>
+                  <div class="right-center">
+                      <asp:DataList ID="DataList3" runat="server" DataKeyField="catid" DataSourceID="ObjectDataSource3" OnSelectedIndexChanged="DataList3_SelectedIndexChanged" BackColor="#f1edee" Width="190">
+
+                        
+                          <ItemTemplate>
+                              <ul class="datalist">
+                                  <li><a href="<%# Eval("catid","showcat.aspx?cid={0}") %>" title="<%# Eval("catname") %>" target="_self"><img src="<%# Eval("imgcat","imgdef/{0}") %>" width="20" height="20" style="float:right;padding-right:20px;padding-top:5px;"  />&nbsp;&nbsp;&nbsp;<%# Eval("catname") %></a></li>
+                              </ul>
+                          </ItemTemplate>
+                      </asp:DataList>
+                      <asp:ObjectDataSource runat="server" ID="ObjectDataSource3" OldValuesParameterFormatString="original_{0}" SelectMethod="GetDataAllCategoreis" TypeName="categorieTableAdapters.tbl_categoriesTableAdapter"></asp:ObjectDataSource>
+                  </div>
+                  <div class="right-bottum"></div>
+                  <asp:ObjectDataSource runat="server" ID="ObjectDataSource7" OldValuesParameterFormatString="original_{0}" SelectMethod="GetDataAllCategoreis" TypeName="categorieTableAdapters.tbl_categoriesTableAdapter"></asp:ObjectDataSource>
+                  <asp:ObjectDataSource runat="server" ID="ObjectDataSource6" OldValuesParameterFormatString="original_{0}" SelectMethod="GetDataNewsByCatId" TypeName="newsTableAdapters.tbl_newsTableAdapter">
+                      <SelectParameters>
+                          <asp:QueryStringParameter QueryStringField="newscat" DefaultValue="0" Name="newscat" Type="Int32"></asp:QueryStringParameter>
+                      </SelectParameters>
+                  </asp:ObjectDataSource>
+                  <asp:ObjectDataSource runat="server" ID="ObjectDataSource5" OldValuesParameterFormatString="original_{0}" SelectMethod="GetDataNewsByCatId" TypeName="newsTableAdapters.tbl_newsTableAdapter">
+                      <SelectParameters>
+                          <asp:QueryStringParameter QueryStringField="nid" DefaultValue="0" Name="newscat" Type="Int32"></asp:QueryStringParameter>
+                      </SelectParameters>
+                  </asp:ObjectDataSource>
+
+                  <br />
+                  <br />
+                  <br />
+                  <br />
+                  
+                    <div class="right-top">
+                        <p style="margin-left: 0px; margin-right: 0px; font-size: 14px; text-align: center;">آخرین مطالب</p>
+                    </div>
+
+                    <div class="right-center">
+
+
+
+
+                        <asp:DataList ID="DataList1" runat="server" DataKeyField="newsid" DataSourceID="ObjectDataSource4"  BackColor="" Width="190">
+
+                                <ItemTemplate>
+
+                                <ul class="datalist">
+
+                                    <li><a href="<%# Eval("newsid","shownews.aspx?nid={0}") %>" title="<%# Eval("newstitle") %>" target="_self" style="text-decoration: none;"><img src="<%# Eval("image","imgdef/{0}") %>" width="20" height="20" style="float:right;padding-right:20px;padding-top:5px;" />&nbsp;&nbsp;&nbsp;<%# Eval("newstitle") %></a></li>
+                                </ul>
+                            </ItemTemplate>
+                        </asp:DataList>
+                        <asp:ObjectDataSource runat="server" ID="ObjectDataSource4" OldValuesParameterFormatString="original_{0}" SelectMethod="GetDataByTOP5NEWS" TypeName="newsTableAdapters.tbl_newsTableAdapter"></asp:ObjectDataSource>
+                        <asp:ObjectDataSource runat="server" ID="ObjectDataSource8" OldValuesParameterFormatString="original_{0}" SelectMethod="GetDataTOP10News" TypeName="newsTableAdapters.tbl_newsTableAdapter"></asp:ObjectDataSource>
+                        <asp:ObjectDataSource ID="ObjectDataSource2" runat="server" OldValuesParameterFormatString="original_{0}" SelectMethod="GetDataTOP10News" TypeName="newsTableAdapters.tbl_newsTableAdapter"></asp:ObjectDataSource>
+                        <asp:ObjectDataSource ID="ObjectDataSource1" runat="server" OldValuesParameterFormatString="original_{0}" SelectMethod="GetDataTOP10News" TypeName="newsTableAdapters.tbl_newsTableAdapter"></asp:ObjectDataSource>
+                    </div>
+                    <div class="right-bottum">
+                    </div>
+              </div>
+
+        
+
+                <div id="vasat">
+                    
+                    <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">
+              </asp:ContentPlaceHolder>
+                    
+                </div>
+                
+          
+
+                <div>
+                    <asp:ContentPlaceHolder ID="ContentPlaceHolder3" runat="server">
+                    </asp:ContentPlaceHolder>
+                    <br />
+                    <br />
+                    <br />
+
+                </div>
+
+                <br />
+
+
+
+
+
+                </center>
+
+                  </div>
+        <center>         
+        <div class="moarfi">
+                     <br />
+                          <p style="color:white;text-align:center;font-family:Tahoma;font-size:20px;">معرفی فیلم هایی که در 2017 اکران میشوند</p>
+                         <div  class="circle_tanzim">
+                           
+                             <center>
+                             <asp:DataList ID="DataList4" runat="server" DataKeyField="imgmid" DataSourceID="ObjectDataSource10" RepeatDirection="Horizontal" RepeatColumns="5" CellPadding="30" Width="140" Height="140" >
+                                 <ItemTemplate>   
+                                       <div class="image">     
+                                     <img src="<%# Eval("imagemadd","imgmoarefi/{0}") %>" title="<%# Eval("imgmtitle") %>" id="circle" />
+                                      </div>
+                                 </ItemTemplate>
+                             </asp:DataList>
+                                 </center>
+                             <asp:ObjectDataSource runat="server" ID="ObjectDataSource10" OldValuesParameterFormatString="original_{0}" SelectMethod="GetDataTOP10img" TypeName="moarefiTableAdapters.tbl_moarfiTableAdapter"></asp:ObjectDataSource>
+                             <asp:ObjectDataSource runat="server" ID="ObjectDataSource9" OldValuesParameterFormatString="original_{0}" SelectMethod="GetDataTOP10img" TypeName="moarefiTableAdapters.tbl_moarfiTableAdapter"></asp:ObjectDataSource>
+                     </div>
+                </div>
+                 
+            </center>
+
+                    <div id="foot">
+                        <center>
+                        		<div style="margin:0 auto;direction:rtl;font-family:'B Homa';padding-bottom:10px;color:black">
+						  <p>
+کپی رایت@2016 تمام حقوق مادی و معنوی این سایت متعلق به  <a href="#" style="text-decoration:none;color:white">زهرا بحرانی و المیرا رادمهر</a> می باشد</p>
+					</div>
+                        </center>
+                    </div>
+            <asp:ContentPlaceHolder ID="ContentPlaceHolder2" runat="server">
+        </asp:ContentPlaceHolder>
+            </div>
+          </form>
+</body>
+</html>
