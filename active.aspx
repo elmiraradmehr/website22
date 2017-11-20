@@ -9,17 +9,7 @@
     <div class="vasat-bala" style="width:630px;font-family:'B Homa';color:white;direction:rtl;margin:0 auto;">پیام سیستم</div>
     <div class="vasat-vasat" style="height:210px;width:630px;direction:rtl;line-height:28px;">
 
-        <div style="float:right;font-family:'B Homa';font-size:18px;padding-top:10px;direction:rtl;padding-right:5px;">
-            <asp:Label ID="Label1" runat="server" Text="Label"> </asp:Label>
-              </div>
-        <br />
-            <br />
-            <div style="float:right;font-family:'B Homa';font-size:16px;padding-top:15px;padding-right:5px">
-                
-               <asp:Label ID="Label2" runat="server" Text=""></asp:Label>
-            </div>
-            <br />
-
+     ***************************************************
          <div style="float:right;padding-right:10px;font-family:'B Homa';font-size:16px;">
     
         <asp:Label ID="Label3" runat="server" Text=""></asp:Label>
